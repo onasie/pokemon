@@ -1,7 +1,7 @@
 import React from 'react';
 import './Layout.css';
 
-//component
+//components
 import Aux from './Auxi/Auxi';
 import Navigation from '../components/Navigation/Navigation';
 

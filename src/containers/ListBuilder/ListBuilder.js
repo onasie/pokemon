@@ -5,19 +5,37 @@ import './ListBuilder.css';
 import Card from '../../components/Card/Card';
 import Aux from '../../hoc/Auxi/Auxi';
 
+//bootstrap
+import { Button } from "react-bootstrap";
+
 const ListBuilder = () => {
   const [pokemonList, setPokemonList] = useState([]);
+
+  const [state, setState] = useState({
+    offset: 0,
+    limit: 20
+  })
   
   useEffect(() => {
+    console.log('useEffect')
     fetchData();
-  }, []);
+    console.log('state.offset', state.offset)
+    console.log('state.limit', state.limit)
+  }, [state]);
 
   const fetchData = () => {
-    fetch(`https://pokeapi.co/api/v2/pokemon??offset=${0}&limit=${20}`)
+    fetch(`https://pokeapi.co/api/v2/pokemon??offset=${state.offset}&limit=${state.limit}`)
     .then((res) => res.json())
       .then((response) => {
         setPokemonList(response.results);
       })
+  }
+
+  const handleNext = () => {
+    setState({
+      offset: state.limit,
+      limit: state.limit + 20 >= 898? 898 : state.limit + 20
+    })
   }
 
   let finalPokemonList = pokemonList
@@ -30,11 +48,12 @@ const ListBuilder = () => {
       <div className="resultCards">
         { finalPokemonList }
       </div>
-      <div>
-        <button>Previous</button>
-        <button>Next</button>
-      </div>
-
+      { state.limit != 898?
+          <div className="button">
+            <Button variant="primary" onClick={handleNext}>
+                Next
+            </Button>
+          </div> : null }
     </Aux>
   );
 }

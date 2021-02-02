@@ -1,6 +1,6 @@
 import React from 'react';
 
-//component
+//components
 import Card from '../../components/Card/Card';
 import Aux from '../../hoc/Auxi/Auxi';
 

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Modal, Button } from "react-bootstrap";
 import './Modal.css';
 
 //component
@@ -11,6 +10,9 @@ import { useHistory } from 'react-router-dom';
 //redux
 import { connect } from 'react-redux';
 import { handleAddMyPokemon, handleRemoveMyPokemon } from '../../redux/action/globalFunctionAction';
+
+//bootstrap
+import { Modal, Button } from "react-bootstrap";
 
 const ModalLayout = (props) => {
     const pokemon = props.pokemon;
