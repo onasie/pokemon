@@ -1,0 +1,15 @@
+.a {
+    color: black;
+    text-decoration: none;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+    white-space: nowrap;
+}
+
+.a:hover,
+.a:active,
+.a.active {
+    text-decoration: underline;
+    font-weight: bold;
+}

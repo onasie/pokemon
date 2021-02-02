@@ -1,0 +1,15 @@
+.image {
+    background-color: white;
+    height: 50px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.image img {
+    height: 100%;
+}
+
+.toolbar {
+    border-bottom: 1px solid black;
+    box-shadow: 0px 0px 20px #888888;
+}
