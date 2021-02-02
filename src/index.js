@@ -19,7 +19,7 @@ const storeRedux = createStore(rootReducer, applyMiddleware(thunk));
 
 const app = (
   <Provider store={storeRedux}>
-    <BrowserRouter basename="/pokemon">
+    <BrowserRouter basename="/pokemon/#">
         <App />
     </BrowserRouter>
   </Provider>
