@@ -36,7 +36,7 @@ const Card = (props) => {
         e.stopPropagation()
         if(props.value != 0 && pathname !== '/catch-random-pokemon') {
             let value = pathname === '/my-pokemon-list'? 0 : 1
-            history.push(`pokemon-detail?id=${id}&name=${name}&value=${value}`)
+            history.push(`/pokemon-detail?id=${id}&name=${name}&value=${value}`)
         }
     }
 
