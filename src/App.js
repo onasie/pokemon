@@ -1,7 +1,7 @@
 import './App.css';
 
 //router
-import { Route, Switch, HashRouter } from 'react-router-dom';
+import { Route, HashRouter } from 'react-router-dom';
 
 //components
 import Layout from './hoc/Layout';
