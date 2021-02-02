@@ -10,7 +10,6 @@ import Layout from './hoc/Layout';
 import ListBuilder from './containers/ListBuilder/ListBuilder';
 import DetailBuilder from './containers/DetailBuilder/DetailBuilder';
 import MyListBuilder from './containers/MyListBuilder/MyListBuilder';
-import RandomBuilder from './containers/RandomBuilder/RandomBuilder';
 
 const App = () => {
   return (
