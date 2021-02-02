@@ -30,8 +30,11 @@ const rootReducer = (state = globalState, action) => {
             }
 
         case ActionType.REMOVE_POKEMON:
+            // console.log('state.pokemonList', state.pokemonList);
             const removePokemon = state.pokemonList.find(res => res.name.toLowerCase() === action.name.toLowerCase());
+            // console.log('removepokemon', removePokemon);
             state.pokemonList.splice(state.pokemonList.indexOf(removePokemon), 1);
+            // console.log('state.pokemonList after remove', state.pokemonList);
             localStorage.setItem('pokemon', JSON.stringify(state.pokemonList));
 
             return {

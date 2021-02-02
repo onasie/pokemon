@@ -18,7 +18,7 @@ const Card = (props) => {
 
     useEffect(() => {
         fetchData();
-    }, [props.pokemon.id]);
+    }, [props.pokemon]);
 
     const fetchData = () => {
         fetch(props.pokemon.url || `https://pokeapi.co/api/v2/pokemon/${props.pokemon.id}`)
