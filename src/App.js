@@ -19,7 +19,7 @@ const App = () => {
           <Route path="/pokemon-detail" exact component={DetailBuilder} />
           <Route path="/my-pokemon-list" exact component={MyListBuilder} />
           <Route path="/catch-random-pokemon" exact component={DetailBuilder} />
-          <Route render={() => <h1>Page Not ound</h1>} />
+          <Route render={() => <h1>Page Not Found</h1>} />
         </Switch>
     </Layout>
   );
