@@ -17,10 +17,7 @@ const ListBuilder = () => {
   })
   
   useEffect(() => {
-    console.log('useEffect')
     fetchData();
-    console.log('state.offset', state.offset)
-    console.log('state.limit', state.limit)
   }, [state]);
 
   const fetchData = () => {
