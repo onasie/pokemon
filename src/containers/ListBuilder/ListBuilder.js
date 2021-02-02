@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './ListBuilder.css';
 
+//components
 import Card from '../../components/Card/Card';
 import Aux from '../../hoc/Auxi/Auxi';
 
